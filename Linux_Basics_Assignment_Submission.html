@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Linux Basics Assignment</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.55; max-width: 900px; margin: 40px auto; color: #222; }
+    h1 { color: #6f1d8f; }
+    h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; margin-top: 32px; }
+    pre { background: #111827; color: #f9fafb; padding: 14px; border-radius: 6px; overflow-x: auto; }
+    img { max-width: 100%; border: 1px solid #ddd; margin-top: 10px; }
+    .details { background: #f7f7f7; padding: 14px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>DevOps Assignment: Linux Basics</h1>
+  <h2>1. Creating and Renaming Files/Directories</h2>
+  <pre>mkdir test_dir
+cd test_dir
+touch example.txt
+mv example.txt renamed_example.txt
+cd ..</pre>
+  <p>The mkdir command creates a new directory named test_dir. The touch command creates an empty file. The mv command renames example.txt to renamed_example.txt.</p>
+  <img src="screenshots/01_create_and_rename.png" alt="Creating and renaming files screenshot">
+
+  <h2>2. Viewing File Contents</h2>
+  <pre>cat /etc/passwd
+head -n 5 /etc/passwd
+tail -n 5 /etc/passwd</pre>
+  <p>The cat command displays the full file contents. The head command displays the first 5 lines, and the tail command displays the last 5 lines.</p>
+  <img src="screenshots/02_view_file_contents.png" alt="Viewing file contents screenshot">
+
+  <h2>3. Searching for Patterns</h2>
+  <pre>grep root /etc/passwd</pre>
+  <p>The grep command searches for lines containing the word root in /etc/passwd.</p>
+  <img src="screenshots/03_grep_root.png" alt="Grep root screenshot">
+
+  <h2>4. Zipping and Unzipping</h2>
+  <pre>zip -r test_dir.zip test_dir
+mkdir unzipped_dir
+unzip test_dir.zip -d unzipped_dir</pre>
+  <p>The zip command compresses the directory, and the unzip command extracts it into unzipped_dir.</p>
+  <img src="screenshots/04_zip_unzip.png" alt="Zip and unzip screenshot">
+
+  <h2>5. Downloading Files</h2>
+  <pre>wget -O sample.txt https://example.com/</pre>
+  <p>The wget command downloads content from a URL and saves it as sample.txt.</p>
+  <img src="screenshots/05_wget_download.png" alt="Wget download screenshot">
+
+  <h2>6. Changing Permissions</h2>
+  <pre>touch secure.txt
+chmod 444 secure.txt
+ls -l secure.txt</pre>
+  <p>The chmod 444 command changes secure.txt permissions to read-only for everyone.</p>
+  <img src="screenshots/06_chmod_permissions.png" alt="Chmod permissions screenshot">
+
+  <h2>7. Working with Environment Variables</h2>
+  <pre>export MY_VAR="Hello, Linux!"
+echo $MY_VAR</pre>
+  <p>The export command creates an environment variable, and echo displays its value.</p>
+  <img src="screenshots/07_environment_variable.png" alt="Environment variable screenshot">
+</body>
+</html>
